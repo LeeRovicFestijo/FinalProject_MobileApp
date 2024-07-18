@@ -21,16 +21,15 @@ class MyTextField extends StatelessWidget {
         controller: controller,
         obscureText: obsecureText,
         decoration: InputDecoration(
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black),
-            ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black),
-            ),
-            hintText: hintText,
           ),
-        
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.orangeAccent),
+          ),
+          hintText: hintText,
         ),
+      ),
     );
   }
 }
