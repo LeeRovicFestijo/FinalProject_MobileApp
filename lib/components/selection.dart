@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_application_1/components/logo.dart';
 
 class Selection extends StatelessWidget {
   final String text_title;
@@ -31,9 +30,6 @@ class Selection extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               logo,
-              // Container(
-              //   child: logo,
-              // ),
               const SizedBox(height: 10,),
               Text(
                 text_title,

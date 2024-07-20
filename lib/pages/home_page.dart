@@ -1,7 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/auth/login_sigin.dart';
 import 'package:flutter_application_1/pages/lowest_discount_page.dart';
 import 'package:flutter_application_1/pages/recommend_page.dart';
+import 'package:flutter_application_1/pages/see_all_page.dart';
+import 'package:flutter_application_1/pages/test_page.dart';
 import 'package:flutter_application_1/pages/top_pick_pages.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -20,9 +24,9 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           color: Color.fromARGB(255, 248, 244, 244),
           padding: EdgeInsets.only(left: 20, right: 20, top: 60),
-          child: const Column(
+          child: Column(
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(FontAwesomeIcons.locationDot, color: Colors.orangeAccent,),
                   Text(
@@ -34,25 +38,31 @@ class _HomePageState extends State<HomePage> {
                   )
                 ]
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Recommended for you',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(width: 75),
-                  Text(
-                    'See all ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.orangeAccent,
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => PizzaPage()));
+                    },
+                    child: const Text(
+                      'See all ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.orangeAccent,
+                      ),
                     ),
                   ),
-                  Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
+                  const Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
                 ],
               ),
               SizedBox(height: 15,),
@@ -63,25 +73,31 @@ class _HomePageState extends State<HomePage> {
 
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Top picks',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(width: 200),
-                  Text(
-                    'See all ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.orangeAccent,
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => const LoginSigin()));
+                    },
+                    child: const Text(
+                      'See all ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.orangeAccent,
+                      ),
                     ),
                   ),
-                  Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
+                  const Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
                 ],
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
 
               TopPick(),
 
@@ -89,25 +105,31 @@ class _HomePageState extends State<HomePage> {
 
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'Lowest discount',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(width: 137),
-                  Text(
-                    'See all ',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.orangeAccent,
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(builder: (context) => const LoginSigin()));
+                    },
+                    child: const Text(
+                      'See all ',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.orangeAccent,
+                      ),
                     ),
                   ),
-                  Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
+                  const Icon(FontAwesomeIcons.chevronRight, size: 15, color: Colors.orangeAccent,)
                 ],
               ),
-              SizedBox(height: 15,),
+              const SizedBox(height: 15,),
 
               LowestDiscount(),
             ],

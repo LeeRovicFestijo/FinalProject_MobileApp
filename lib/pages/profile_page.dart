@@ -101,6 +101,7 @@ class ProfilePage extends StatelessWidget {
                     icon: Icons.logout,
                     title: 'Sign out',
                     onTap: () {
+                      Navigator.pop(context);
                       Navigator.push(
                         context,
                         MaterialPageRoute(
