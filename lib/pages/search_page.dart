@@ -152,10 +152,7 @@ class _SearchPageState extends State<SearchPage> {
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide(color: Colors.orangeAccent),
                   ),
-                  // enabledBorder: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(8.0),
-                  //   borderSide: BorderSide(color: Colors.orangeAccent),
-                  // ),
+                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide(color: Colors.orangeAccent),
@@ -202,3 +199,4 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 }
+
