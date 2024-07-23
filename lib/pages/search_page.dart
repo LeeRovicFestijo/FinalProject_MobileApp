@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'restaurant_detail_page.dart'; 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SearchPage extends StatefulWidget {
@@ -93,16 +94,25 @@ class _SearchPageState extends State<SearchPage> {
     },
   ];
   List<Map<String, String>> _filteredLocations = [];
+  String _selectedCategory = 'pastry';
 
   @override
   void initState() {
     super.initState();
-    _filteredLocations.addAll(_locations.where((location) => location['group'] == 'pastry'));
+    _filterLocations();
+  }
+
+  void _filterLocations() {
+    setState(() {
+      _filteredLocations = _locations.where((location) => location['group'] == _selectedCategory).toList();
+    });
   }
 
   void _handleCategoryFilter(String category) {
     setState(() {
-      _filteredLocations = _locations.where((location) => location['group'] == category).toList();
+      _selectedCategory = category;
+      _searchController.clear();
+      _filterLocations();
     });
   }
 
@@ -110,7 +120,7 @@ class _SearchPageState extends State<SearchPage> {
     query = query.toLowerCase();
     setState(() {
       _filteredLocations = _locations.where((location) {
-        return location['group'] == 'pastry' &&
+        return location['group'] == _selectedCategory &&
             location['name']!.toLowerCase().contains(query);
       }).toList();
     });
@@ -124,15 +134,18 @@ class _SearchPageState extends State<SearchPage> {
         backgroundColor: Color.fromARGB(255, 248, 244, 244),
         actions: [
           IconButton(
-            icon: Icon(FontAwesomeIcons.breadSlice, color: Colors.orangeAccent,),
+            icon: Icon(FontAwesomeIcons.breadSlice,
+                color: _selectedCategory == 'pastry' ? Colors.orangeAccent : Colors.grey),
             onPressed: () => _handleCategoryFilter('pastry'),
           ),
           IconButton(
-            icon: Icon(Icons.restaurant, color: Colors.orangeAccent,),
+            icon: Icon(Icons.restaurant,
+                color: _selectedCategory == 'restaurants' ? Colors.orangeAccent : Colors.grey),
             onPressed: () => _handleCategoryFilter('restaurants'),
           ),
           IconButton(
-            icon: Icon(Icons.fastfood, color: Colors.orangeAccent,),
+            icon: Icon(Icons.fastfood,
+                color: _selectedCategory == 'hamburgers' ? Colors.orangeAccent : Colors.grey),
             onPressed: () => _handleCategoryFilter('hamburgers'),
           ),
         ],
@@ -165,7 +178,7 @@ class _SearchPageState extends State<SearchPage> {
                 Expanded(
                   child: ListView.separated(
                     itemCount: _filteredLocations.length,
-                    separatorBuilder: (context, index) => Divider(color: Colors.orangeAccent,),
+                    separatorBuilder: (context, index) => Divider(color: Colors.orangeAccent),
                     itemBuilder: (context, index) {
                       return ListTile(
                         title: Text(
@@ -179,6 +192,17 @@ class _SearchPageState extends State<SearchPage> {
                           _filteredLocations[index]['address']!,
                           style: TextStyle(fontSize: 16),
                         ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RestaurantDetailPage(
+                                name: _filteredLocations[index]['name']!,
+                                address: _filteredLocations[index]['address']!,
+                              ),
+                            ),
+                          );
+                        },
                       );
                     },
                   ),
@@ -198,4 +222,3 @@ class _SearchPageState extends State<SearchPage> {
     );
   }
 }
-
