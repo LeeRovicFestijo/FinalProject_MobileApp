@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
                   left: MediaQuery.of(context).size.width / 2 - 50,
                   child: const CircleAvatar(
                     radius: 50,
-                    backgroundImage: AssetImage('assets/profile.jpg'),
+                    backgroundImage: AssetImage('asset/dunkinlogo.png'),
                   ),
                 ),
               ],

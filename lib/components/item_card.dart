@@ -9,8 +9,10 @@ class ItemCard extends StatelessWidget {
   final String rating;
   final String distance;
   final String availableCount;
+  final String order;
 
-  ItemCard({
+  const ItemCard({
+    super.key,
     required this.imageUrl,
     required this.title,
     required this.time,
@@ -19,14 +21,15 @@ class ItemCard extends StatelessWidget {
     required this.rating,
     required this.distance,
     required this.availableCount,
+    required this.order
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
+        borderRadius: BorderRadius.circular(15),
+      ),
       margin: EdgeInsets.all(16.0),
       color: Colors.white,
       elevation: 4,
@@ -40,7 +43,7 @@ class ItemCard extends StatelessWidget {
                 child: Image.asset(
                   imageUrl,
                   width: double.infinity,
-                  height: 150,
+                  height: 120,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -49,7 +52,10 @@ class ItemCard extends StatelessWidget {
                 left: 8,
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  color: Colors.orangeAccent,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.orangeAccent
+                  ),
                   child: Text(
                     availableCount,
                     style: TextStyle(color: Colors.white),
@@ -58,10 +64,17 @@ class ItemCard extends StatelessWidget {
               ),
               Positioned(
                 top: 8,
-                right: 8,
-                child: IconButton(
-                  icon: Icon(Icons.favorite_border, color: Colors.white),
-                  onPressed: () {},
+                right: 10,
+                child: InkWell(
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        backgroundColor: Colors.orangeAccent,
+                        content: Text('Added to favorites')
+                      )
+                    );
+                  },
+                  child: const Icon(Icons.favorite_border, color: Colors.white),
                 ),
               ),
             ],
@@ -74,10 +87,11 @@ class ItemCard extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(height: 4),
                 Text(
-                  'Surprise Bag',
+                  order,
                   style: TextStyle(fontSize: 16),
                 ),
                 SizedBox(height: 4),
@@ -107,13 +121,18 @@ class ItemCard extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 4),
-                Text(
-                  oldPrice,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
-                    decoration: TextDecoration.lineThrough,
-                  ),
+                Row(
+                  children: [
+                    const Spacer(),
+                    Text(
+                    oldPrice,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey,
+                      decoration: TextDecoration.lineThrough,
+                      ),
+                    ),
+                  ]
                 ),
               ],
             ),

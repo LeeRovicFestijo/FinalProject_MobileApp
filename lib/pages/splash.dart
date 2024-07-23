@@ -29,7 +29,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
-      duration: 4000,
+      duration: 3000,
       backgroundColor: Colors.orangeAccent,
       splash: Column(
       children: [Image.asset('asset/full.png', height: 250, width: 250,)],), // placeholder for icon

@@ -68,8 +68,8 @@ class _SearchPageState extends State<SearchPage> {
     },
     {
       'group': 'hamburgers',
-      'name': "Good Grilled Burgers",
-      'address': '490 V.Tolentino Street, Brgy.Kumintang Ibaba, Batangas City',
+      'name': "BG Burgers",
+      'address': 'Concha Road, Beside SM City Batangas, Batangas City',
     },
     {
       'group': 'hamburgers',
@@ -150,16 +150,15 @@ class _SearchPageState extends State<SearchPage> {
                   labelStyle: TextStyle(color: Colors.orangeAccent),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide(color: Colors.orangeAccent),
+                    borderSide: BorderSide(color: Colors.orangeAccent)
                   ),
-                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                    borderSide: BorderSide(color: Colors.orangeAccent),
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide(color: Colors.orangeAccent)
                   ),
                   prefixIcon: Icon(Icons.search),
                 ),
-                onChanged: _handleSearch, // Ensure _handleSearch is defined
+                onChanged: _handleSearch,
               ),
               SizedBox(height: 20),
               if (_filteredLocations.isNotEmpty)
@@ -192,10 +191,10 @@ class _SearchPageState extends State<SearchPage> {
                     style: TextStyle(fontSize: 18),
                   ),
                 ),
-            ],
-          ),
-        ),
-      ),
+            ]
+          )
+        )
+      )
     );
   }
 }

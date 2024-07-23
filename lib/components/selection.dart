@@ -3,21 +3,25 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Selection extends StatelessWidget {
   final String text_title;
-  final String text_time;
-  final String text_price;
+  final String text_place;
+  final String text_ratings;
+  final String text_away;
   final logo;
 
   const Selection({
     super.key,
     required this.text_title,
-    required this.text_time,
-    required this.text_price,
+    required this.text_place,
+    required this.text_ratings,
+    required this.text_away,
     required this.logo
     });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 260,
+      width: 200,
       margin: const EdgeInsets.only(bottom: 10),
       child: Material(
         elevation: 4.0,
@@ -33,7 +37,7 @@ class Selection extends StatelessWidget {
               const SizedBox(height: 10,),
               Text(
                 text_title,
-                textAlign: TextAlign.left,
+                overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w800,
@@ -41,8 +45,9 @@ class Selection extends StatelessWidget {
                 ),
               ),
               Text(
-                  text_time,
-                  textAlign: TextAlign.left,
+                  text_place,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 10,
@@ -53,17 +58,28 @@ class Selection extends StatelessWidget {
               
               Row(
                 children: [
-                  const Icon(FontAwesomeIcons.pesoSign, size: 15,),
-                  const SizedBox(width: 1,),
+                  const Icon(Icons.star, size: 18, color: Colors.orangeAccent),
+                  const SizedBox(width: 5,),
                   Text(
-                    text_price,
-                    textAlign: TextAlign.justify,
+                    text_ratings,
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w800,
-                      color: Colors.black,
+                      color: Colors.orangeAccent,
                     ),
-                ),
+                  ),
+                  const Spacer(),
+                  const Icon(Icons.location_on, size: 15, color: Colors.orangeAccent,),
+                  const SizedBox(width: 5,),
+                  Text(
+                    text_away,
+                    style: const TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.orangeAccent,
+                    ),
+                  )
                 ],
               ),
             ],

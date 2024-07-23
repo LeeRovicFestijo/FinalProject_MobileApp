@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/components/item_card.dart';
 import 'package:flutter_application_1/pages/item_list_page.dart';
 
-class SeeAllPage extends StatelessWidget {
-  const SeeAllPage({super.key});
+class SeeAllDiscount extends StatelessWidget {
+  const SeeAllDiscount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class SeeAllPage extends StatelessWidget {
           },
         ),
         title: const Text(
-          'Recommended for you',
+          'Best Bargain',
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -41,72 +41,6 @@ class SeeAllPage extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-              ),
-              GestureDetector( //dunkin 1
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/dunkinbanner.jpeg', 
-                        availableCount: '4 left', 
-                        logo: 'asset/dunkinlogo.png', 
-                        storeName: "Dunkin' Donuts", 
-                        order: '1 dozen doughnuts', 
-                        price: '299.99 PHP', 
-                        ratings: '4.7 rating', 
-                        collectionTime: 'Collect tomorrow: 13:00 - 15:00', 
-                        place: 'P. Burgos, Brg. 9, Batangas City', 
-                        orderInfo: '1 dozen of assorted premium doughnuts', 
-                        limitedTime: '1 day, 3 hours, 10 mins left to reserve',
-                        oldPrice: '599.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/dunkinbanner.jpeg',
-                  title: "Dunkin' Donuts",
-                  time: 'Collect tomorrow: 13:00 - 15:00',
-                  price: '299.99',
-                  oldPrice: '599.99',
-                  rating: '4.7',
-                  distance: '7.5 mi',
-                  availableCount: '4 left',
-                  order: '1 dozen doughnuts',
-                ),
-              ),
-              GestureDetector( //dunkin 2
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/dunkinbanner.jpeg', 
-                        availableCount: '5+ left', 
-                        logo: 'asset/dunkinlogo.png', 
-                        storeName: "Dunkin' Donuts", 
-                        order: '1 dozen doughnuts', 
-                        price: '299.99 PHP', 
-                        ratings: '4.7 rating', 
-                        collectionTime: 'Collect tomorrow: 16:00 - 18:00', 
-                        place: 'Calicanto, Batangas City', 
-                        orderInfo: '1 dozen of assorted premium doughnuts', 
-                        limitedTime: '1 day, 13 hours, 10 mins left to reserve',
-                        oldPrice: '599.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/dunkinbanner.jpeg',
-                  title: "Dunkin' Donuts",
-                  time: 'Collect tomorrow: 16:00 - 18:00',
-                  price: '299.99',
-                  oldPrice: '599.99',
-                  rating: '4.7',
-                  distance: '3.73 mi',
-                  availableCount: '5+ left',
-                  order: '1 dozen doughnuts',
                 ),
               ),
               GestureDetector( //dunkin 3
@@ -274,39 +208,6 @@ class SeeAllPage extends StatelessWidget {
                   order: '2 Solo Round Cake',
                 ),
               ),
-              GestureDetector( //johannas grille
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/johannasbanner.jpg', 
-                        availableCount: '3 left', 
-                        logo: 'asset/johannas.jpg', 
-                        storeName: "Johanna's Grille", 
-                        order: '1 Crispy Pata', 
-                        price: '299.99 PHP', 
-                        ratings: '4.8 rating', 
-                        collectionTime: 'Collect tomorrow: 14:00 - 15:00', 
-                        place: 'Q364+9V9, P. Burgos, Poblacion, Batangas City', 
-                        orderInfo: '1 Medium Crispy Pata', 
-                        limitedTime: '2 day, 15 hours, 48 mins left to reserve',
-                        oldPrice: '599.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/johannasbanner.jpg',
-                  title: "Johanna's Grille",
-                  time: 'Collect tomorrow: 14:00 - 15:00',
-                  price: '299.99 PHP',
-                  oldPrice: '599.99 PHP',
-                  rating: '4.8',
-                  distance: '15.2 mi',
-                  availableCount: '3 left',
-                  order: '1 Crispy Pata',
-                ),
-              ),
               GestureDetector( //bg burgers
                 onTap: () {
                   Navigator.push(
@@ -336,7 +237,7 @@ class SeeAllPage extends StatelessWidget {
                   oldPrice: '299.99 PHP',
                   rating: '4.9',
                   distance: '4.6 mi',
-                  availableCount: '5+ left',
+                  availableCount: '4+ left',
                   order: '1 Burger and wings',
                 ),
               ),
@@ -371,39 +272,6 @@ class SeeAllPage extends StatelessWidget {
                   distance: '5.1 mi',
                   availableCount: '4 left',
                   order: "Max's Fried Chicken",
-                ),
-              ),
-              GestureDetector( //eats and treats
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/eatsntreatsbanner.jpg', 
-                        availableCount: '2 left', 
-                        logo: 'asset/eatsntreats.jpg', 
-                        storeName: "Eats and Treats by Darlen", 
-                        order: '8-inch strawberry cake', 
-                        price: '99.99 PHP', 
-                        ratings: '4.9 rating', 
-                        collectionTime: 'Collect tomorrow: 10:00 - 12:00', 
-                        place: 'Poblacion, Batangas City', 
-                        orderInfo: '1 8-inch strawberry cake', 
-                        limitedTime: '1 day, 15 hours, 10 mins left to reserve',
-                        oldPrice: '199.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/eatsntreatsbanner.jpg',
-                  title: "Eats and Treats by Darlen",
-                  time: 'Collect tomorrow: 10:00 - 12:00',
-                  price: '99.99 PHP',
-                  oldPrice: '199.99 PHP',
-                  rating: '4.9',
-                  distance: '9.7 mi',
-                  availableCount: '2 left',
-                  order: '8-inch strawberry cake',
                 ),
               ),
               GestureDetector( //darn good burger
@@ -472,39 +340,6 @@ class SeeAllPage extends StatelessWidget {
                   order: 'Crispy chicken',
                 ),
               ),
-              GestureDetector( //explosive burger
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/explosiveburgerbanner.jpg', 
-                        availableCount: '5+ left', 
-                        logo: 'asset/explosiveburger.jpg', 
-                        storeName: "Explosive Burger", 
-                        order: '1 Mayon Burger', 
-                        price: '89.99 PHP', 
-                        ratings: '4.9 rating', 
-                        collectionTime: 'Collect tomorrow: 14:00 - 16:00', 
-                        place: '125 C M.H.Del Pilar, Street, Batangas City', 
-                        orderInfo: '1 triple quarter pounder with bun, cheese, grilled patty, honey mustard, ketchup, cucumber, tomato, white onion, fresh lettuce', 
-                        limitedTime: '1 day, 8 hours, 31 mins left to reserve',
-                        oldPrice: '239.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/explosiveburgerbanner.jpg',
-                  title: "Explosive Burger",
-                  time: 'Collect tomorrow: 14:00 - 16:00',
-                  price: '89.99 PHP',
-                  oldPrice: '239.99 PHP',
-                  rating: '4.9',
-                  distance: '15.7 mi',
-                  availableCount: '5+ left',
-                  order: '1 Mayon Burger',
-                ),
-              ),
               GestureDetector( // ann's home
                 onTap: () {
                   Navigator.push(
@@ -536,39 +371,6 @@ class SeeAllPage extends StatelessWidget {
                   distance: '8.46 mi',
                   availableCount: '3 left',
                   order: '1 Butter cake',
-                ),
-              ),
-              GestureDetector( //the burger station
-                onTap: () {
-                  Navigator.push(
-                    context, MaterialPageRoute(
-                      builder: (context) => const ItemListPage(
-                        storeBanner: 'asset/burgerstationbanner.jpg', 
-                        availableCount: '4 left', 
-                        logo: 'asset/burgerstation.jpg', 
-                        storeName: "Burger Station", 
-                        order: '1 Chicken Burger', 
-                        price: '109.99 PHP', 
-                        ratings: '5 rating', 
-                        collectionTime: 'Collect today: 12:00 - 13:00', 
-                        place: '24-B Alegre, Barangay 11, Batangas City', 
-                        orderInfo: '1 chicken burger with fries', 
-                        limitedTime: '2 hours, 42 mins left to reserve',
-                        oldPrice: '169.99 PHP',
-                      )
-                    )
-                  );
-                },
-                child: const ItemCard(
-                  imageUrl: 'asset/burgerstationbanner.jpg',
-                  title: "Burger Station",
-                  time: 'Collect today: 12:00 - 13:00',
-                  price: '109.99 PHP',
-                  oldPrice: '169.99 PHP',
-                  rating: '5',
-                  distance: '10.81 mi',
-                  availableCount: '4 left',
-                  order: '1 Chicken Burger',
                 ),
               ),
             ],

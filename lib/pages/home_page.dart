@@ -4,8 +4,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_application_1/auth/login_sigin.dart';
 import 'package:flutter_application_1/pages/lowest_discount_page.dart';
 import 'package:flutter_application_1/pages/recommend_page.dart';
+import 'package:flutter_application_1/pages/see_all_discount.dart';
 import 'package:flutter_application_1/pages/see_all_page.dart';
-import 'package:flutter_application_1/pages/test_page.dart';
+import 'package:flutter_application_1/pages/see_all_pick.dart';
 import 'package:flutter_application_1/pages/top_pick_pages.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => PizzaPage()));
+                        context, MaterialPageRoute(builder: (context) => SeeAllPage()));
                     },
                     child: const Text(
                       'See all ',
@@ -84,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => const LoginSigin()));
+                        context, MaterialPageRoute(builder: (context) => const SeeAllPick()));
                     },
                     child: const Text(
                       'See all ',
@@ -99,14 +100,14 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 15,),
 
-              TopPick(),
+              const TopPick(),
 
               SizedBox(height: 20,),
 
               Row(
                 children: [
                   const Text(
-                    'Lowest discount',
+                    'Best Bargain',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
@@ -116,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => const LoginSigin()));
+                        context, MaterialPageRoute(builder: (context) => const SeeAllDiscount()));
                     },
                     child: const Text(
                       'See all ',

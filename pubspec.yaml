@@ -80,6 +80,20 @@ flutter:
     - asset/goodgrilledburgers.jpg
     - asset/johannas.jpg
     - asset/maxrestaurant.png
+    - asset/maxbanner.jpg
+    - asset/bgbanner.jpg
+    - asset/lacremebanner.jpg
+    - asset/burg2gobanner.jpg
+    - asset/sweetclairebanner.jpg
+    - asset/johannasbanner.jpg
+    - asset/eatsntreatsbanner.jpg
+    - asset/darngoodburgerbanner.jpg
+    - asset/ann.png
+    - asset/annbanner.jpg
+    - asset/butchbanner.jpg
+    - asset/explosiveburgerbanner.jpg
+    - asset/burgerstationbanner.jpg
+    - asset/burgerstation.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
