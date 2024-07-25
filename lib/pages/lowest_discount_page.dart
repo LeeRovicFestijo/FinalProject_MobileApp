@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/auth/login_sigin.dart';
 import 'package:flutter_application_1/components/item_card2.dart';
-import 'package:flutter_application_1/components/item_list.dart';
 import 'package:flutter_application_1/pages/item_list_page.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_application_1/components/logo.dart';
 
 class LowestDiscount extends StatefulWidget {
   const LowestDiscount({super.key});

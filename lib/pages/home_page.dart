@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_application_1/auth/login_sigin.dart';
 import 'package:flutter_application_1/pages/lowest_discount_page.dart';
 import 'package:flutter_application_1/pages/recommend_page.dart';
 import 'package:flutter_application_1/pages/see_all_discount.dart';
