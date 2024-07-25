@@ -57,8 +57,8 @@ class _TopPickState extends State<TopPick> {
                   price: '199.99 PHP', 
                   ratings: '5 rating', 
                   place: 'Ground Floor SM City Batangas, M.Pastor Ave, Batangas City', 
-                  orderInfo: '1 dozen of assorted premium doughnuts', 
-                  limitedTime: '6 pieces of assorted premium doughnuts and 6 pieces of classic dougnuts',
+                  orderInfo: '6 pieces of assorted premium doughnuts and 6 pieces of classic dougnuts', 
+                  limitedTime: '3 hours, 10 mins left to order',
                   oldPrice: '599.99 PHP',
                   )
                 )
