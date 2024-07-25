@@ -10,7 +10,6 @@ class ItemListPage extends StatelessWidget {
   final String order;
   final String price;
   final String ratings;
-  final String collectionTime;
   final String place;
   final String orderInfo;
   final String limitedTime;
@@ -25,7 +24,6 @@ class ItemListPage extends StatelessWidget {
     required this.order,
     required this.price,
     required this.ratings,
-    required this.collectionTime,
     required this.place,
     required this.orderInfo,
     required this.limitedTime,
@@ -73,7 +71,6 @@ class ItemListPage extends StatelessWidget {
               order: order, 
               price: price, 
               ratings: ratings, 
-              collectionTime: collectionTime, 
               place: place, 
               orderInfo: orderInfo, 
               limitedTime: limitedTime,

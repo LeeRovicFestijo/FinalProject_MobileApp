@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class ItemCard extends StatelessWidget {
   final String imageUrl;
   final String title;
-  final String time;
   final String price;
   final String oldPrice;
   final String rating;
@@ -15,7 +14,6 @@ class ItemCard extends StatelessWidget {
     super.key,
     required this.imageUrl,
     required this.title,
-    required this.time,
     required this.price,
     required this.oldPrice,
     required this.rating,
@@ -93,11 +91,6 @@ class ItemCard extends StatelessWidget {
                 Text(
                   order,
                   style: TextStyle(fontSize: 16),
-                ),
-                SizedBox(height: 4),
-                Text(
-                  time,
-                  style: TextStyle(fontSize: 14, color: Colors.grey),
                 ),
                 SizedBox(height: 8),
                 Row(

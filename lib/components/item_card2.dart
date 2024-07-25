@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class ItemCard2 extends StatelessWidget {
   final String imageUrl;
   final String title;
-  final String time;
   final String price;
   final String rating;
   final String distance;
@@ -16,7 +15,6 @@ class ItemCard2 extends StatelessWidget {
     super.key,
     required this.imageUrl,
     required this.title,
-    required this.time,
     required this.price,
     required this.rating,
     required this.distance,
@@ -30,7 +28,7 @@ class ItemCard2 extends StatelessWidget {
     String displayTitle = title.length > 15 ? '${title.substring(0, 15)}...' : title;
 
     return Container(
-      height: 210,
+      height: 190,
       width: 300,
       margin: EdgeInsets.only(bottom: 10),
       child: Material(
@@ -122,11 +120,6 @@ class ItemCard2 extends StatelessWidget {
                   Text(
                     order,
                     style: TextStyle(fontSize: 14),
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    time,
-                    style: TextStyle(fontSize: 12, color: Colors.grey),
                   ),
                   SizedBox(height: 8),
                   Row(

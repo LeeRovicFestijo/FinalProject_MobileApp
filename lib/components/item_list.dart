@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/payment_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ItemList extends StatelessWidget {
@@ -10,7 +11,6 @@ class ItemList extends StatelessWidget {
   final String order;
   final String price;
   final String ratings;
-  final String collectionTime;
   final String place;
   final String orderInfo;
   final String limitedTime;
@@ -26,7 +26,6 @@ class ItemList extends StatelessWidget {
     required this.order,
     required this.price,
     required this.ratings,
-    required this.collectionTime,
     required this.place,
     required this.orderInfo,
     required this.limitedTime,
@@ -123,14 +122,6 @@ class ItemList extends StatelessWidget {
               const SizedBox(height: 10),
               Row(
                 children: [
-                  const Icon(Icons.access_time),
-                  const SizedBox(width: 5),
-                  Text(collectionTime), //collection time
-                ],
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
                   const Icon(Icons.location_on),
                   const SizedBox(width: 5),
                   Flexible(
@@ -166,11 +157,13 @@ class ItemList extends StatelessWidget {
               const SizedBox(height: 20),
               Center(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentPage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   ),
-                  child: const Text('Reserve', style: TextStyle(color: Colors.orangeAccent),),
+                  child: const Text('Order', style: TextStyle(color: Colors.orangeAccent),),
                 ),
               ),
             ],
