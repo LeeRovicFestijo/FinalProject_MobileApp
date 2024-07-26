@@ -23,8 +23,8 @@ System Features
 ### Steps
 1. Clone the Repository
 "git clone 
-\nhttps://github.com/LeeRovicFestijo/FinalProject_MobileApp.git
-\ncd FinalProject_MobileApp"
+https://github.com/LeeRovicFestijo/FinalProject_MobileApp.git
+cd FinalProject_MobileApp"
 
 2. Run the Application
 "npm start"
