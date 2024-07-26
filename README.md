@@ -8,7 +8,6 @@ System Features
 - Delivery System: Order and Receive your meal right through your doorstep with the help of ChowBite Delivery System.
 - User Profile: Manage your account, view past purchases, and add/view your favorites stores to your profile.
 
-# SDG
 ## SDG 12: Responsible Consumption and Production
 ChowBite promotes more efficient use of resources by preventing surplus food from going to waste. This supports the goal of ensuring sustainable consumption and production patterns.
 
