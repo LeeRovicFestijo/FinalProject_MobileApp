@@ -23,13 +23,13 @@ System Features
 ### Steps
 1. Clone the Repository
 "git clone 
-https://github.com/LeeRovicFestijo/FinalProject_MobileApp.git
-cd FinalProject_MobileApp"
+\nhttps://github.com/LeeRovicFestijo/FinalProject_MobileApp.git
+\ncd FinalProject_MobileApp"
 
 2. Run the Application
 "npm start"
 
-#Members
+# Members
 - Cruz, Mykel Aris B.
 - Festijo, Lee Rovic D.
 - Rosete, Eleazar R.
