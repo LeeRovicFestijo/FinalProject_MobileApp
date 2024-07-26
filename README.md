@@ -1,16 +1,36 @@
-# flutter_application_1
+# ChowBite
 
-A new Flutter project.
+# Overview
+ ChowBite is a community-driven platform designed to reduce food waste by connecting users with local stores and restaurants  that have surplus food. Users can purchase this food at a discounted price, helping to save the environment while enjoying delicious meals.
 
-## Getting Started
+System Features
+- Browse Local Offers: Discover surplus food deals from nearby stores and restaurants.
+- Delivery System: Order and Receive your meal right through your doorstep with the help of ChowBite Delivery System.
+- User Profile: Manage your account, view past purchases, and add/view your favorites stores to your profile.
 
-This project is a starting point for a Flutter application.
+# Technologies Used
+## Programming Languages
+- Dart
+- Flutter
 
-A few resources to get you started if this is your first Flutter project:
+## IDE
+- VS Code
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Repository
+- GitHub
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Installation
+### Steps
+1. Clone the Repository
+"git clone 
+https://github.com/LeeRovicFestijo/FinalProject_MobileApp.git
+cd FinalProject_MobileApp"
+
+2. Run the Application
+"npm start"
+
+#Members
+- Cruz, Mykel Aris B.
+- Festijo, Lee Rovic D.
+- Rosete, Eleazar R.
+- Villanueva, Errol Gaven E.
